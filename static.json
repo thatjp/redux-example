@@ -1,0 +1,6 @@
+{
+    "root": "dis/",
+    "routes": {
+        "/**": "index.html"
+    }
+}
