@@ -1,16 +1,20 @@
 import React from 'react';
 
+import { Card, CardText} from 'material-ui/Card';
+import { List, ListItem } from 'material-ui/List';
+
 const BioSkills = () => {
     return (
-        <div>
-            <ul>
-                <li>Web Dev</li>
-                <li>Design</li>
-                <li>Video</li>
-                <li>Adobe CC</li>
-                <li>React</li>
-            </ul>
-        </div>
+        <Card>
+            <CardText>
+            <List>
+                <ListItem>Web Dev</ListItem>
+                <ListItem>Design</ListItem>
+                <ListItem>Video Editing</ListItem>
+                <ListItem>Music Production</ListItem>
+            </List>
+            </CardText>
+        </Card>
     );
 };
 
