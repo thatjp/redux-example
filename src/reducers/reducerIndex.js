@@ -19,7 +19,7 @@ function BioReducer(state = [
 
         case 'SWITCH_PROFILE':
             
-            return
+            console.log('Switch Profiles')
     
         default:
             return state;
