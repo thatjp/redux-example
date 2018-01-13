@@ -1,11 +1,7 @@
 
-/*--------------------
 
-Switch between User Profiles
+import * as types from '../constants/ActionTypes';
 
---------------------*/
+export const switchProfile = id => ({ type: types.SWITCH_PROFILE, id })
 
-export const switchProfile = () => ({
-    type: 'SWITCH_PROFILE',
-})
 

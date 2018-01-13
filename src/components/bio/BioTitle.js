@@ -7,10 +7,10 @@ the user is applying/searching for
 
 --------------------*/
 
-const BioTitle = () => {
+const BioTitle = (props) => {
     return (
         <div>
-            <h2>Full-Stack Dev</h2>
+            <h2>Web Dev</h2>
         </div>
     );
 };

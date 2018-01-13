@@ -1,17 +1,34 @@
-import React, { Component } from 'react';
+
+///////////////////////////////////[ Package Imports ]///////////////////////////////////
+import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as TodoActions from '../actions/actionIndex';
+
+
+///////////////////////////////////[ Directory Imports ]///////////////////////////////////
 import Bio from './Bio';
 import TopNav from './TopNav';
+
+///////////////////////////////////[ Styling ]///////////////////////////////////
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-class App extends Component {
-  render() {
-    return ( 
+const App = (state) => (
     <MuiThemeProvider>
         <TopNav />
-        <Bio />      
+        <Bio profiles={state}/>
     </MuiThemeProvider> 
-    );
-  }
-}
+);
 
-export default App;
+const mapStateToProps = state => ({
+  id: state.id
+})
+
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(TodoActions, dispatch)
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+  )(App);
