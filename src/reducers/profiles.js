@@ -27,7 +27,7 @@ export default function profiles(state = initialState, action) {
     switch (action.type) {
         case 'SWITCH_PROFILE':
             
-            return state
+            console.log(state[0].name)
     
         default:
             return state;

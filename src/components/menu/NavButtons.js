@@ -5,7 +5,10 @@ import GHButton from './GHButton';
 
 import FlatButton from 'material-ui/FlatButton';
 
-
+function log(e) {
+    e.preventDefualt()
+    
+}
 
 const NavButton = () => (
     <div>
