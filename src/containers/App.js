@@ -1,34 +1,49 @@
 
 ///////////////////////////////////[ Package Imports ]///////////////////////////////////
-import React from 'react';
-import { bindActionCreators } from 'redux';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as TodoActions from '../actions/actionIndex';
-
+import { bindActionCreators } from 'redux';
 
 ///////////////////////////////////[ Directory Imports ]///////////////////////////////////
 import Bio from './Bio';
-import TopNav from './TopNav';
+import TopNav from '../components/menu/TopNav';
+import { switchProfiles } from '../actions/index';
 
-///////////////////////////////////[ Styling ]///////////////////////////////////
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+function mapStateToProps(state) {
+  return{
+    prof_id: state.profiles.profiles.prof_id,
+    name: state.profiles.profiles.name,
+    text: state.profiles.profiles.text,
+    skills: state.profiles.profiles.skills
+  } 
+}
 
-const App = (state) => (
-    <MuiThemeProvider>
-        <TopNav />
-        <Bio profiles={state}/>
-    </MuiThemeProvider> 
-);
+function mapDispatchToProps(dispatch) {
+  return { action: bindActionCreators(switchProfiles), dispatch }
+}
 
-const mapStateToProps = state => ({
-  id: state.id
-})
+class App extends Component {
 
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(TodoActions, dispatch)
-})
+// componentWillMount() {
+//   this.props.dispatch(switchProfiles())
+// }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-  )(App);
+handleClick() {
+  this.props.dispatch(switchProfiles())
+}
+
+  render() {
+
+    const profile = this.props
+    
+    return (
+      <div>
+        {console.log(this.props)}
+        <TopNav click={this.handleClick.bind(this)}/>
+        <Bio info={profile} />
+      </div> 
+    );
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

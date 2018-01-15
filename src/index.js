@@ -1,14 +1,14 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import reducer from './reducers/reducerIndex';
 import App from './containers/App';
+import store from './constants/store';
 
-const store = createStore(reducer)
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+const app = document.getElementById('root')
 ///////////////////////////////////[ Overview/Goals ]///////////////////////////////////
 
 /*--------------------
@@ -31,8 +31,11 @@ Provider makes the React application connect to the redux store, "provide" the s
 --------------------*/
 
 ReactDOM.render(
+    
     <Provider store={store}>
-        <App />
-    </Provider>, document.getElementById('root')
+        <MuiThemeProvider> 
+            <App />
+        </MuiThemeProvider> 
+    </Provider>, app
     );
 

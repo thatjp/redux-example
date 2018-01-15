@@ -4,8 +4,6 @@ import profiles from './profiles';
 
 //should initialState always be an array
 
-const rootReducer = combineReducers({
+export default combineReducers({
     profiles
 })
-
-export default rootReducer

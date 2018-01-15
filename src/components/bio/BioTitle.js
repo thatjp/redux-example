@@ -10,7 +10,7 @@ the user is applying/searching for
 const BioTitle = (props) => {
     return (
         <div>
-            <h2>Web Dev</h2>
+            <h2>{props.name}</h2>
         </div>
     );
 };

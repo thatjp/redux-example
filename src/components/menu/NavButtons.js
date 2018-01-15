@@ -1,22 +1,15 @@
-
 import React from 'react';
-
-import GHButton from './GHButton';
 
 import FlatButton from 'material-ui/FlatButton';
 
-function log(e) {
-    e.preventDefualt()
-    
-}
+const NavButton = (props) => (
 
-const NavButton = () => (
     <div>
-        <FlatButton label="Next"/>
+        <FlatButton label="Next" onClick={props.click.bind(this)}/>
         <FlatButton label="Previous"/>
         <FlatButton label="All"/>
         <FlatButton label="Github" href="https://github.com/thatjp/redux-example" />
     </div>
 );
 
-export default NavButton;
+export default NavButton

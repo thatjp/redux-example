@@ -3,15 +3,12 @@ import React from 'react';
 import { Card, CardText} from 'material-ui/Card';
 import { List, ListItem } from 'material-ui/List';
 
-const BioSkills = () => {
+const BioSkills = (props) => {
     return (
         <Card>
             <CardText>
             <List>
-                <ListItem>Web Dev</ListItem>
-                <ListItem>Design</ListItem>
-                <ListItem>Video Editing</ListItem>
-                <ListItem>Music Production</ListItem>
+                {props.skills.map((skill, key) => {return <ListItem>{skill}</ListItem>})}
             </List>
             </CardText>
         </Card>
