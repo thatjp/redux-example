@@ -1,4 +1,4 @@
-import { SWITCH_PROFILE } from '../constants/actionTypes'
+// import { SWITCH_PROFILE } from '../constants/actionTypes'
 
 /*--------------------
 
@@ -18,7 +18,7 @@ export default function profiles(state = {profiles:
         }, action) {
 
     switch (action.type) {
-        case SWITCH_PROFILE:
+        case "SWITCH_PROFILE":
              
             return {...state, prof_id: action.payload}
         default:
