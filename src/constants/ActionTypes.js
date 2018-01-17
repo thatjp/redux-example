@@ -1,3 +1,0 @@
-
-export const SWITCH_PROFILE = 'SWITCH_PROFILE'
-

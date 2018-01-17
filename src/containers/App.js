@@ -22,11 +22,16 @@ function mapDispatchToProps(dispatch) {
   return { action: bindActionCreators(switchProfiles), dispatch }
 }
 
-class App extends Component {
+///////////////////////////////////[ Export App and Export Default APP ]///////////////////////////////////
 
-// componentWillMount() {
-//   this.props.dispatch(switchProfiles())
-// }
+/*--------------------
+
+For Jest testing porpuses Redux docs advise you export the class indvidually
+and import explicitly. This is done to deal with the pitfalls of react-redux connect()
+
+--------------------*/
+
+export class App extends Component {
 
 handleClick() {
   this.props.dispatch(switchProfiles())
@@ -38,7 +43,7 @@ handleClick() {
     
     return (
       <div>
-        {console.log(this.props)}
+        <h1></h1>
         <TopNav click={this.handleClick.bind(this)}/>
         <Bio info={profile} />
       </div> 
@@ -47,3 +52,4 @@ handleClick() {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
+
