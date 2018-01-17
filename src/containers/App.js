@@ -8,6 +8,7 @@ import { bindActionCreators } from 'redux';
 import Bio from './Bio';
 import TopNav from '../components/menu/TopNav';
 import { switchProfiles } from '../actions/index';
+import '../scss/Style.css'
 
 function mapStateToProps(state) {
   return{
@@ -43,9 +44,10 @@ handleClick() {
     
     return (
       <div>
-        <h1></h1>
+        
         <TopNav click={this.handleClick.bind(this)}/>
         <Bio info={profile} />
+        <p id="test">This element is styled through SASS</p>
       </div> 
     );
   }

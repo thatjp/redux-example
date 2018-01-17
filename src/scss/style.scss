@@ -1,0 +1,14 @@
+
+@import './variables/colors.scss';
+
+#test {
+    display: block;
+    position: relative;
+    width: 50%;
+
+    padding: 3px;
+
+    border: 5px solid $p-border;
+    background: $p-background;
+    color: $p-color;
+}
