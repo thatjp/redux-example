@@ -47,7 +47,7 @@ handleClick() {
         
         <TopNav click={this.handleClick.bind(this)}/>
         <Bio info={profile} />
-        <p id="test">This element is styled through SASS</p>
+        <p id="test">This element is styled through SASS, but heroku's file serving is having trouble compiling the SASS to the public directory</p>
       </div> 
     );
   }
