@@ -8,7 +8,6 @@ import { bindActionCreators } from 'redux';
 import Bio from './Bio';
 import TopNav from '../components/menu/TopNav';
 import { switchProfiles } from '../actions/index';
-import styles from '../scss/Style.css'
 
 function mapStateToProps(state) {
   return{
