@@ -47,7 +47,8 @@ handleClick() {
         
         <TopNav click={this.handleClick.bind(this)}/>
         <Bio info={profile} />
-        <p id="test">This element is styled through SASS</p>
+        <p class="test">This element is styled through SASS</p>
+        <p class="test">Test Elem.</p>
       </div> 
     );
   }
