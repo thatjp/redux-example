@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 ///////////////////////////////////[ Directory Imports ]///////////////////////////////////
 import Bio from './Bio';
 import TopNav from '../components/menu/TopNav';
+import Instagram from './Instagram';
 import { switchProfiles } from '../actions/index';
 require('../scss/Style.css')
 
@@ -47,8 +48,9 @@ handleClick() {
         
         <TopNav click={this.handleClick.bind(this)}/>
         <Bio info={profile} />
-        <p class="test">This element is styled through SASS</p>
-        <p class="test">Test Elem.</p>
+        <p className="test">This element is styled through SASS</p>
+        <p className="test">Test Elem.</p>
+        <Instagram />
       </div> 
     );
   }

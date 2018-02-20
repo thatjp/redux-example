@@ -9,6 +9,7 @@ import store from './constants/store';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const app = document.getElementById('root')
+
 ///////////////////////////////////[ Overview/Goals ]///////////////////////////////////
 
 /*--------------------
@@ -26,7 +27,7 @@ I aim to implement:
 
 /*--------------------
 
-Provider makes the React application connect to the redux store, "provide" the store to the child components
+Provider has the React application connect to the redux store, "provide" the store to the child components
 
 --------------------*/
 
